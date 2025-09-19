@@ -6,45 +6,73 @@
     <style>
       body {
         text-align: center;
-        font-family: Arial;
-        margin-top: 50px;
+        font-family: Arial, sans-serif;
+        margin: 20px;
       }
+
       #imageBox {
-        width: 400px;
-        height: 300px;
+        width: 90%;              
+        max-width: 400px;        
+        aspect-ratio: 4 / 3;   
         border: 5px solid yellow;
         display: block;
         margin: auto;
         background-size: cover;
         background-position: center;
       }
-      button {
-        width: 60px;
-        height: 40px;
-        margin: 5px;
-        font-weight: bold;
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
       }
+
+      button {
+        flex: 1 1 60px;
+        max-width: 80px;
+        height: 40px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
       #play {
         background: green;
         color: white;
       }
+
       #stop {
         background: red;
         color: white;
       }
+
       .arrow {
         background: yellow;
+      }
+
+      
+      @media (max-width: 600px) {
+        button {
+          max-width: 60px;
+          height: 35px;
+          font-size: 14px;
+        }
       }
     </style>
   </head>
   <body>
     <h2>Slide Show</h2>
     <div id="imageBox"></div>
-    <br />
-    <button class="arrow" onclick="prev()">&#60;</button>
-    <button id="play" onclick="play()">play</button>
-    <button id="stop" onclick="stop()">stop</button>
-    <button class="arrow" onclick="next()">&#62;</button>
+
+    <div class="buttons">
+      <button class="arrow" onclick="prev()">&#60;</button>
+      <button id="play" onclick="play()">Play</button>
+      <button id="stop" onclick="stop()">Stop</button>
+      <button class="arrow" onclick="next()">&#62;</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
