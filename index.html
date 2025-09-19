@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 3</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial;
+        margin-top: 50px;
+      }
+      #imageBox {
+        width: 400px;
+        height: 300px;
+        border: 5px solid yellow;
+        display: block;
+        margin: auto;
+        background-size: cover;
+        background-position: center;
+      }
+      button {
+        width: 60px;
+        height: 40px;
+        margin: 5px;
+        font-weight: bold;
+      }
+      #play {
+        background: green;
+        color: white;
+      }
+      #stop {
+        background: red;
+        color: white;
+      }
+      .arrow {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Slide Show Game</h2>
+    <div id="imageBox"></div>
+    <br />
+    <button class="arrow" onclick="prev()">&#60;</button>
+    <button id="play" onclick="play()">play</button>
+    <button id="stop" onclick="stop()">stop</button>
+    <button class="arrow" onclick="next()">&#62;</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
